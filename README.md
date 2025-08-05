@@ -168,15 +168,15 @@ To download a preview of a board in SVG format you can got to `/preview/{boardNa
    归根结底，WBO 帮你搞定这些糟心事儿：• 远程头脑风暴：大家各自涂涂画画，想法秒显现，灵感不断穿插• 在线教学：老师可以划重点、写公式、演示示意图，学生还能实时互动• 团队原型设计：产品经理、设计师直接一起在线画线框图，省去反复截图发群的烦恼• 创意涂鸦：随手画个流程图、人物草图，灵感来了就开画
 想要私有化部署？也非常简单，我来给你划个重点表格：
 ### 部署方式
-   一. 步骤概要Docker 容器（推荐）：隔离、安全、快速启动
-    1. mkdir wbo-boards
-    2. chown -R 1000:1000 wbo-boards
-    3. docker run -it -p 5001:80 -v $(pwd)/wbo-boards:/opt/app/server-data lovasoa/wbo:latest
-   二.  Node.js ：直跑零依赖容器，方便调试
-    1. git clone https://github.com/lovasoa/whitebophir.git
-    2. npm install --production
-    3. PORT=5001 npm start
-   三.子目录部署（反向代理）可集成到既有域名下的子路径，地址更“官方化”配置 Nginx/Apache，参见 Wiki 反向代理教程
+     一. 步骤概要Docker 容器（推荐）：隔离、安全、快速启动
+     1. mkdir wbo-boards
+     2. chown -R 1000:1000 wbo-boards
+     3. docker run -it -p 5001:80 -v $(pwd)/wbo-boards:/opt/app/server-data lovasoa/wbo:latest
+    二.  Node.js ：直跑零依赖容器，方便调试
+     1. git clone https://github.com/lovasoa/whitebophir.git
+     2. npm install --production
+     3. PORT=5001 npm start
+    三.子目录部署（反向代理）可集成到既有域名下的子路径，地址更“官方化”配置 Nginx/Apache，参见 Wiki 反向代理教程
 ### 安装完之后，浏览器打开 http://你的域名:5001，点“New board”就能开始画。想分享？把链接丢给同事，1、2 秒钟进来一起涂鸦。
 ### 主要功能&亮点功能
     模块说明画笔&形状工具：支持多种颜色、直线、矩形、椭圆、箭头，基础绘图齐活
@@ -191,7 +191,7 @@ To download a preview of a board in SVG format you can got to `/preview/{boardNa
           部署简单，支持 Docker，超快上手
           支持离线断线重连；自动保存
           社区活跃，有不少贡献者和丰富扩展
-   缺点：
+    缺点：
           高级功能（比如音视频）需要另选其他工具
           UI 比商业产品简陋，缺少“花里胡哨”
           大规模会议时对服务器性能有一定要求
